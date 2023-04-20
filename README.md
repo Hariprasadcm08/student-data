@@ -14,5 +14,4 @@ marks_id,student_id,subject_name,marks,test_date
 standards as input
 
 >>. /fetch_results this API should send a response of student results with student name and % ,Result
-like[fail,F.class, S.class, distinction] . (Results should be in a % with the sum of multiple subjects. if the %
-is &lt;35 [Fail] , &gt;35 &amp; &lt;60 [Second class] , &gt;60 &amp; &lt;85 [First class] , &gt;85 [distinction]
+like[fail,F.class, S.class, distinction].(Results should be in a % with the sum of multiple subjects. if the % is &lt;35 [Fail] , &gt;35 &amp; &lt;60 [Second class] , &gt;60 &amp; &lt;85 [First class] ,   &gt;85 [distinction]
