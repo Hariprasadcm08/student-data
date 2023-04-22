@@ -90,23 +90,27 @@ const getStudentResults = async function (req, res) {
           finalResult.class=studentCheck.standard
           let totalMarks=((marksCheck.Kannada+marksCheck.English+marksCheck.Hindi+marksCheck.Science+marksCheck.Maths+marksCheck.SocialScience)/6) *100
         if (totalMarks < 35) {
+            finalResult.percentage="fail"
             return res.send(`Student has failed in the test happened on: ${marksCheck.test_date}`);
           }
-          finalResult.percentage="fail"
+          
           if (totalMarks >=35  && totalMarks<60) {
+              finalResult.percentage="second class"
             return res.send(`Student got second class  in the test happened on: ${marksCheck.test_date}`);
           }
-          finalResult.percentage="second class" 
+           
 
           if (totalMarks >=60  && totalMarks<85) {
+              finalResult.percentage="first class" 
             return res.send(`Student got first class  in the test happened on: ${marksCheck.test_date}`);
           }
-          finalResult.percentage="first class" 
+          
 
           if (totalMarks >=85){
+              finalResult.percentage="distinction" 
             return res.send(`Student got distinction  in the test happened on: ${marksCheck.test_date}`);
           }
-          finalResult.percentage="distinction" 
+          
 
           res.status(200).send({finalResult})
       }catch (error) {
